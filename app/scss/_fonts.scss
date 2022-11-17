@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Oswald-Light';
+  src: local('Oswald-Light'),
+     url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
+     url('../fonts/Oswald-Light.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald-Regular';
+  src: local('Oswald-Regular'),
+     url('../fonts/Oswald-Regular.woff2') format('woff2'),
+     url('../fonts/Oswald-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

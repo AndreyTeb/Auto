@@ -1,0 +1,341 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+
+body{
+  @extend %Oswald-300;
+  font-size: 18px;
+  line-height: 27px;
+  color: $black;
+}
+.container{
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.header{
+  background-image: url(../images/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  min-height: 700px;
+  color: #fff;
+  &__top{
+    padding: 47px 0 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content{
+    padding-top: 60px;
+    position: relative;
+  }
+  &__title{
+    @extend %Oswald-400;
+    font-size: 72px;
+    line-height: 107px;
+    text-transform: uppercase;
+  }
+  &__subtitle{
+    @extend %Oswald-400;
+    font-size: 36px;
+    line-height: 53px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  &__social{
+    padding: 70px 0 20px 60px;
+  }
+  &__text{
+    margin-bottom: 30px;
+    max-width: 800px
+  }
+  &__images{
+    position: absolute;
+    right: 0;
+    bottom: -280px;
+  }
+
+}
+.social{
+  display: flex;
+  align-items: center;
+  &__link{
+    margin: 0 5px;
+  }
+}
+.phone{
+  @extend %Oswald-400;
+  font-size: 36px;
+  line-height: 53px;
+}
+.button{
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  padding: 14px 54px 15px;
+  background-color: $accent;
+  border-radius: 3px;
+  transition: all .5s;
+  cursor: pointer;
+  &:hover{
+    background-color: #fff;
+    color: $accent;
+  }
+  &--decor{
+    margin-top: -19px;
+    color: #fff;
+    position: relative;
+    border: 1px solid $accent;
+  }
+  &--decor::after{
+    content: 'ЖМИ';
+    position: absolute;
+    color: $grey;
+    margin-left: 130px;
+  }
+  &--decor::before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: $grey;
+    right: -65px;
+    top: 24px;
+  }
+}
+.title{
+  color: $firm;
+  font-size: 36px;
+  line-height: 53px;
+  @extend %Oswald-400;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: $firm;
+    top: 22px;
+    margin-left: 18px;
+  }
+}
+
+.services{
+  padding-top: 350px;
+  &__inner {
+    display: flex;
+    margin-bottom: 100px;
+  }
+  &__content{
+    width: 505px;
+    margin-right: 96px;
+  }
+  &__content-title{
+    color: $accent;
+    font-size: 18px;
+    line-height: 27px;
+    @extend %Oswald-300;
+    margin-bottom: 12px;
+  }
+  &__content-textbox{
+    margin-bottom: 69px;
+  }
+  &__content-text{
+    margin-bottom: 12px;
+  }
+
+  &__list{
+    list-style: none;
+    counter-reset: my-counter;
+  }
+  &__item{
+    counter-increment: my-counter;
+    border: 2px solid $grey;
+    margin-bottom: 8px;
+    width: 450px;
+    padding: 10px 15px 10px 113px;
+    position: relative;
+    transition: all .5s;
+  }
+  &__item::before{
+    content: '0' counter(my-counter);
+    position: absolute;
+    left: 20px;
+    font-size: 36px;
+    line-height: 53px;
+    @extend %Oswald-400;
+    color: $grey;
+    transform: rotate(-90deg);
+    transition: all .5s;
+  }
+  &__item:hover{
+    border: 2px solid $accent;
+    width: 500px;
+  }
+  &__item:hover .services__iten-title{
+    color: $accent;
+  }
+  &__item:hover::before{
+    color: $accent;
+  }
+  &__item-title{
+    font-size: 24px;
+    @extend %Oswald-300;
+  }
+}
+
+.benefits{
+  margin-bottom: 100px;
+  &__inner{
+    display: flex;
+  }
+  &__images{
+    margin-right: 95px;
+  }
+  &__content{
+    width: 100%;
+    color: #fff;
+  }
+  &__title{
+    margin-left: 185px;
+  }
+  &__list{
+    list-style: none;
+    background-color: $firm;
+    padding: 25px 0 25px 185px;
+  }
+  &__item{
+    width: 320px;
+    margin-bottom: 20px;
+  }
+  &__item-num{
+    font-size: 36px;
+    line-height: 53px;
+    @extend %Oswald-400;
+  }
+  &__item-title{
+    font-size: 24px;
+    line-height: 36px;
+    @extend %Oswald-300;
+  }
+  &__item-text{
+    color: $grey;
+  }
+}
+
+.carousel{
+  margin-bottom: 100px;
+  &__item-box{
+    border: 1px solid $grey;
+    padding: 6px 6px 16px;
+    margin: 0 7px;
+    text-align: center;
+    transition: all .5s;
+  }
+  &__item-box:hover{
+    color: #fff;
+    background-color: $accent;
+    border-color: $accent;
+  }
+  &__item-images{
+    width: 100%;
+    margin-bottom: 23px;
+  }
+  &__item-title{
+    margin-bottom: 5px;
+    @extend %Oswald-300;
+  }
+  & .slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  & .slick-dots button{
+    font-size: 0;
+    border: none;
+    margin: 0 10px;
+    width: 50px;
+    height: 1px;
+    background-color: $grey;
+    cursor: pointer;
+  }
+  & .slick-active button{
+    background-color: $accent;
+    height: 3px;
+  }
+}
+
+.contacts{
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    margin-bottom: 20px;
+  }
+  &__item-title{
+    color: $accent;
+  }
+  &__form{
+    background-color: $firm;
+    padding: 50px 75px 57px;
+    text-align: center;
+  }
+  &__title{
+    color: #fff;
+    text-align: left;
+    margin-bottom: 16px;
+    margin-left: 53px;
+  }
+  &__title::after{
+    background-color: #fff;
+  }
+  &__input{
+    background-color: transparent;
+    width: 450px;
+    height: 75px;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-bottom: 12px;
+    display: block;
+    font-size: 24px;
+    padding: 0 15px;
+    text-align: center;
+  }
+  &__input::placeholder{
+    text-align: center;
+    font-size: 18px;
+    line-height: 27px;
+    @extend %Oswald-300;
+    color: $grey;
+  }
+  &__btn{
+    border: none;
+    color: #fff;
+    margin-top: 78px;
+  }
+}
+
+.footer{
+  background-color: $firm;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    height: 100px;  }
+}
+
+
+// .class::before{  для цифр в ol
+//   content: '0' counter(name);
+// }
+// .class:nth-child(n + 10)::before{
+//   content: counter(name);
+// }
+
+@import 'media';
